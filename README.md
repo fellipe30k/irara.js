@@ -2,8 +2,6 @@
 
 THE FRAMEWORK OF THE FRAMEWORK OF THE FRAMEWORK
 
-
-
 O Irara foi criado para ajudar os Devs a serem mais produtivos, não precisando "recriar a roda"
 
 "./package.json"
@@ -20,3 +18,14 @@ O Irara foi criado para ajudar os Devs a serem mais produtivos, não precisando 
         "rxjs": "^6.6.7",
         "yup": "^0.32.9"
     }
+
+# Criar um Projeto Irara
+node irara.js new
+
+# Scaffolds
+node irara.ja scaffold MODEL_NAME [...FIELDS]
+Exemplo:
+node irara.ja scaffold user nome email password
+node irara.ja scaffold cliente nome email
+
+
