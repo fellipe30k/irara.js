@@ -23,12 +23,12 @@ O Irara foi criado para ajudar os Devs a serem mais produtivos, não precisando 
 node irara.js new
 
 # Scaffolds
-node irara.ja scaffold MODEL_NAME [...FIELDS]
+node irara.js scaffold MODEL_NAME [...FIELDS]
 
 Exemplo:
 
-node irara.ja scaffold user nome email password
+node irara.js scaffold user nome email password
 
-node irara.ja scaffold cliente nome email
+node irara.js scaffold cliente nome email
 
 
