@@ -24,8 +24,11 @@ node irara.js new
 
 # Scaffolds
 node irara.ja scaffold MODEL_NAME [...FIELDS]
+
 Exemplo:
+
 node irara.ja scaffold user nome email password
+
 node irara.ja scaffold cliente nome email
 
 
