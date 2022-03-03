@@ -456,12 +456,12 @@ function AddEdit(props) {
         <form onSubmit={handleSubmit(onSubmit)}>
             <h1>{isAddMode ? 'Add ${name}' : 'Edit ${name}'}</h1>
             <div className="form-row">  
-                ${fields.map(x=>` 
+                ${(fields.map(x=>` 
                 <div className="form-group col-3">
                     <label>${x}</label>
                     <input name="${x}" type="text" {...register('${x}')} className={${crase}form-control ${dolar}{errors.${x} ? 'is-invalid' : ''}${crase}} />
                     <div className="invalid-feedback">{errors.${x}?.message}</div>
-                </div>`)}
+                </div>`)).toString().replace(',','')}
             </div>            
             <div className="form-group">
                 <button type="submit" disabled={formState.isSubmitting} className="btn btn-primary mr-2">
@@ -526,14 +526,14 @@ function Index() {
             <table className="table table-striped">
                 <thead>
                     <tr>
-       ${fields.map(x=>`<th style={{ width: '30%' }}>${x}</th>`)}                        
+       ${(fields.map(x=>`<th style={{ width: '30%' }}>${x}</th>`)).toString().replace(',','')}
                         <th style={{ width: '10%' }}></th>
                     </tr>
                 </thead>
                 <tbody>
                     {${name}s && ${name}s.map(${name} =>
                         <tr key={${name}.id}>
-           ${fields.map(x=>`<td>{${name}.${x}}</td>`)}
+           ${(fields.map(x=>`<td>{${name}.${x}}</td>`)).toString().replace(',','')}
                             <td style={{ whiteSpace: 'nowrap' }}>
                                 <Link href={${crase}/${name}s/edit/${dolar}{${name}.id}${crase}} className="btn btn-sm btn-primary mr-1">Edit</Link>
                                 <button onClick={() => delete${name}(${name}.id)} className="btn btn-sm btn-danger btn-delete-${name}" disabled={${name}.isDeleting}>
